@@ -1,10 +1,14 @@
 #!/bin/bash
 
-yum install httpd -y
-systemctl start httpd
-systemctl enable httpd
+apt update
+apt install apache2 -y
 
-firewall-cmd --permanent --add-service=http
-firewall-cmd --reload
+systemctl start apache2
+systemctl enable apache2
+
+ufw allow 'Apache'
+ufw reload
 
 echo "Hello DevOps - My Server" > /var/www/html/index.html
+
+systemctl restart apache2
