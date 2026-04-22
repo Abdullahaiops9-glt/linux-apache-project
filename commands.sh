@@ -1,5 +1,6 @@
-yum install httpd -y
-systemctl start httpd
-systemctl enable httpd
-firewall-cmd --permanent --add-service=http
-firewall-cmd --reload
+apt update
+apt install apache2 -y
+systemctl start apache2
+systemctl enable apache2
+ufw allow 'Apache'
+ufw reload
