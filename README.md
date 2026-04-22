@@ -37,7 +37,7 @@ firewall-cmd --reload
 ---
 
 ## 🌍 Website
-http://<server-ip>
+# http://<server-ip>
 
 ---
 
